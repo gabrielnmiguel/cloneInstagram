@@ -1,51 +1,84 @@
 
-/* Suggestion container */
-.container {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container h2 {
-  margin-top: 10vh;
-  display: flex;
-  padding: 8px 22vw;
-  justify-content: start;
-  font-size: 15px;
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+.inicio {
+  width: 600px;
+}
+
+
+.sugestao {
+  width: 300px;
+  margin-top: 50px;
+}
+
+
+.sugestao h1 {
+  font-size: 14px;
+  color: #a8a8a8;
+  margin-bottom: 15px;
+}
+
 
 .sugest {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 22vw;
-
+  margin-bottom: 15px;
 }
 
-.photo {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.sugest button {
-  background: none;
-  color: #4d4dff;
-  border: none;
-}
-
-.sugest button:hover {
-  color: #6b6bff;
-}
 
 .perfil {
   display: flex;
   align-items: center;
 }
 
-.sugest p {
-  font-weight: bold;
-  font-size: 12px;
-  margin: 0 10px;
+
+.photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
+
+.sugest p {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.sugest button {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sugest button:hover {
+  color: #1877f2;
+}
+

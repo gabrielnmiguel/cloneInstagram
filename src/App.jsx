@@ -6,6 +6,12 @@ import Gabi from './assets/salsicha.jpg'
 import Grazim from './assets/valente.jpg'
 import Meu from './assets/meu.jpg'
 import Jeto from './assets/JETP.jpg'
+import Garota1 from './assets/sugestão/garota 1.jpg'
+import Garota2 from './assets/sugestão/garota 2.jpg'
+import Carinha1 from './assets/sugestão/carinha 1.jpg'
+import Carinha2 from './assets/sugestão/carinha 2.jpg'
+import Carinha3 from './assets/sugestão/carinha 3.jpg'
+
 
 
 function App() {
@@ -13,6 +19,8 @@ function App() {
 
   return (
     <>
+     <div className="layout">
+    <section className="inicio">
     <Story
       fotos={Gabi}
       fotos1={Grazim}
@@ -26,12 +34,17 @@ function App() {
       perfil4="jetomi"
       perfil5="William"
     />
-    <Sugest foto='src/perfilSemFoto.jpg' nome='Gabrielle Rodrigues'></Sugest>
-    <Sugest foto='src/perfilSemFoto.jpg' nome='Davi Brito'></Sugest>
-    <Sugest foto='src/perfilSemFoto.jpg' nome='Ana T.'></Sugest>
-    <Sugest foto='src/perfilSemFoto.jpg' nome='Marcos Henrique'></Sugest>
-    <Sugest foto='src/perfilSemFoto.jpg' nome='Thiago Mariano'></Sugest>
+    </section>
+  <section className="sugestao">
+    <Sugest foto= {Garota1} nome='Gabrielle Rodrigues'></Sugest>
+    <Sugest foto= {Carinha1} nome='Davi Brito'></Sugest>
+    <Sugest foto= {Garota2} nome='Ana T.'></Sugest>
+    <Sugest foto= {Carinha2} nome='Marcos Henrique'></Sugest>
+    <Sugest foto= {Carinha3} nome='Thiago Mariano'></Sugest>
+  </section>
+  </div>
     </>
+    
   )
 }
 

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.footerInformations{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-inline: 16px;
+
+    width: 287px;
+    height: 111px;
+
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+
+    color: #4b4b4b;
+
+    /* background-color: chartreuse; */
+}
+
+
+.topicSection{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    width: 100%;
+    height: 48px;
+
+
+
+    color: inherit;
+    
+}
+
+.topics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 3px;
+
+
+
+    font-family: inherit,'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+
+    /* background-color: blueviolet; */
+
+}
+
+
+
+.ulItems{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* margin-right: 2px; */
+
+    --x---base-line-clamp-line-height: 16px;
+    line-height: 16px;
+
+    &::after{
+        content: '\B7 ';
+        padding-inline: 3px;
+        font-size: inherit; 
+        /* background-color: saddlebrown; */
+
+    }
+
+    &:last-child::after {
+        content: '';
+        /* background-color: red; */
+
+    }
+
+    &:first-child{
+
+        margin-left: 0;
+    
+    }
+}
+
+.allATags{
+
+    text-transform: capitalize;
+    font-size: inherit;
+    vertical-align: center;
+    justify-items: center;
+
+
+    word-break: break-word;
+    word-wrap: break-word;
+
+
+    &:hover{
+        cursor: pointer;
+
+        text-decoration: underline;
+
+    }
+
+
+}
+
+.apiPageA{
+
+    text-transform: uppercase;
+
+
+}
+
+
+.copyrightSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+
+
+
+    & .copyright{
+        text-transform: uppercase;
+        font-size: inherit;
+
+        & .groupName{
+            
+            padding-inline: 10px;
+
+            font-weight: 900;
+
+
+            background-color: rgb(253, 167, 167);
+            border-radius: 8px;
+
+
+        }
+    }
+}
+
+

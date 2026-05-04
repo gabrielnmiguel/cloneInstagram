@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -181,4 +181,42 @@
     right: 0;
     border-right-color: var(--border);
   }
+} */
+
+
+.allPageContent{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+
+  width: 100dvw;
+  /* width: calc( 100% - (630px + 383px)); */
+
+
+  overflow-y:scroll;
+  overflow-x: none;
+
+  /* background-color: blueviolet; */
+
+
+}
+
+.primaryContent{
+
+  width: 630px;
+  height: 100%;
+
+  background-color: firebrick;
+
+}
+
+.thirdJunction{
+  padding-inline-start: 64px;
+
+
+  /* background-color: purple; */
+
 }

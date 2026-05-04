@@ -3,7 +3,7 @@
 
 .allPost{
 
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.473);
 
 }
 
@@ -15,7 +15,9 @@
     width: 468px;
     height: 585px;
 
-    background-color: seagreen;
+    background-color: rgba(46, 139, 86, 0.493);
+
+
 }
 
 .publisherInformation{

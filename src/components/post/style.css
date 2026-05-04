@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.allPost{
+
+    background-color: blue;
+
+}
+
+.imageSection{
+
+
+    position: relative;
+
+    width: 468px;
+    height: 585px;
+
+    background-color: seagreen;
+}
+
+.publisherInformation{
+    display: flex;
+
+    position: absolute;
+
+
+    background-color: coral;
+    z-index:10;
+
+    & .perfilImage{
+
+
+        width: 50px;
+        height: 50px;
+
+        background-color: greenyellow;
+
+    }
+
+    & .postPublisherInformation{
+
+
+        background-color: magenta;
+    }
+
+}

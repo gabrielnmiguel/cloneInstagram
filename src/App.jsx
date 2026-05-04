@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css'
 import  Story from './components/story/Story'
 import Sugest from  './components/sugestão/index.jsx'
@@ -13,12 +14,27 @@ import Carinha2 from './assets/sugestão/carinha 2.jpg'
 import Carinha3 from './assets/sugestão/carinha 3.jpg'
 
 
+=======
+import { useState } from 'react'
+import './reset.css'
+import './App.css'
+
+
+
+// import Sidebar from './components/navigate/index.jsx'
+// import Story from './components/story/Story.jsx'
+import { Sidebar as Side } from './components/navigate/index'
+import {Post} from './components/post/index'
+import { FloatMessagens } from './components/floatMessages/index'
+import { Footer } from './components/footer/index'
+>>>>>>> sidebar
 
 function App() {
 
 
   return (
     <>
+<<<<<<< HEAD
      <div className="layout">
     <section className="inicio">
     <Story
@@ -46,6 +62,49 @@ function App() {
     </>
     
   )
+=======
+      <header>
+        <Side />
+
+
+      </header>
+      <div className='allPageContent'>
+        <main className='primaryContent' >
+          <section className='stories'>
+
+          </section>
+          <section className='pageContent'>
+
+            <Post></Post>
+          </section>
+
+
+          <FloatMessagens />
+        
+        </main>
+
+        <section className='thirdJunction'>
+          <section className='accountSection'>
+
+          </section>
+
+          <section className='suggestionSection'>
+
+
+          </section>
+
+          <footer>
+            <Footer />
+
+
+          </footer>
+
+        </section>
+
+      </div>
+    </>
+  );
+>>>>>>> sidebar
 }
 
 export default App

@@ -1,13 +1,19 @@
 import './style.css'
-
 export default function UserProfile(props) {
+
   return (
-    <div className="user">
+    <section className="user">
+      <div className='container'>
         <img src={props.photo} alt={props.name}></img>
-        <div className='userInfo'>
+
+        <div className='info'>
         <p className='username'>{props.username}</p>
         <p>{props.name}</p>
         </div>
-    </div>
+        
+        </div>
+        <button>Trocar</button>
+
+    </section>
   );
 }

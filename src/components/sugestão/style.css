@@ -1,7 +1,8 @@
-.sugestao h1 {
+.suggestionSection h1 {
   font-size: 14px;
-  color: #a8a8a8;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 

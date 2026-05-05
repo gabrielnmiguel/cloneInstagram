@@ -1,19 +1,40 @@
 .user {
     margin-top: 30px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.userInfo {
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.info {
     margin-left: 10px;
 }
 
 .username {
     font-weight: bold;
-    line-height: 20px;
+    line-height: 25px;
 }
 
 .user img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+}
+
+.user button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user button:hover {
+    color: #1877f2;
 }

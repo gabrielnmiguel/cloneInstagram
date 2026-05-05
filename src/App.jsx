@@ -83,7 +83,7 @@ function App() {
           </section>
 
           <section className='suggestionSection'>
-           <UserProfile photo={photoUser} name='grazielly lacerda' username='grazlacerd'></UserProfile>
+           <UserProfile photo={photoUser} name='Ana Carolina' username='ana.tbarbosa'></UserProfile>
             <h1>Sugestões para você</h1>
             <Sugest foto= {Garota1} nome='Gabrielle Rodrigues'></Sugest>
             <Sugest foto= {Carinha1} nome='Davi Brito'></Sugest>

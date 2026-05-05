@@ -11,6 +11,7 @@ import Garota2 from './assets/sugestão/garota 2.jpg'
 import Carinha1 from './assets/sugestão/carinha 1.jpg'
 import Carinha2 from './assets/sugestão/carinha 2.jpg'
 import Carinha3 from './assets/sugestão/carinha 3.jpg'
+import photoUser from './assets/photoUser.jpg'
 
 
 import { useState } from 'react'
@@ -25,6 +26,8 @@ import { Sidebar as Side } from './components/navigate/index'
 import {Post} from './components/post/index'
 import { FloatMessagens } from './components/floatMessages/index'
 import { Footer } from './components/footer/index'
+import UserProfile from './components/userProfile/index.jsx'
+
 
 function App() {
 
@@ -80,6 +83,8 @@ function App() {
           </section>
 
           <section className='suggestionSection'>
+           <UserProfile photo={photoUser} name='grazielly lacerda' username='grazlacerd'></UserProfile>
+            <h1>Sugestões para você</h1>
             <Sugest foto= {Garota1} nome='Gabrielle Rodrigues'></Sugest>
             <Sugest foto= {Carinha1} nome='Davi Brito'></Sugest>
             <Sugest foto= {Garota2} nome='Ana T.'></Sugest>

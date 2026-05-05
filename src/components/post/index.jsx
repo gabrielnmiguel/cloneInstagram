@@ -29,31 +29,45 @@ export function Post(props){
                         <figcaption></figcaption>
                     </figure> */}
 
-                <section className='publisherInformation'>
-                    <section className='perfilImage'>
-                        <figure>
-                            <img src="" alt="" srcset="" />
-                            <figcaption></figcaption>
-                        </figure>
-                        
-                    </section>
-                    <section className='postPublisherInformation'>
-                        <p>
-                            <a className='publisherUsername' href="#">publisherUsername</a>
-                            <a className='publicationTime' href="#">horas</a></p>
-                        <p className='postAssets'></p>
+                    <section className='publisherInformation'>
+                        <section>
 
+
+                            <section className='perfilImage'>
+                                <figure>
+                                    <img src="" alt="" srcset="" />
+                                    <figcaption></figcaption>
+                                </figure>
+                                
+                            </section>
+                            <section className='postPublisherInformation'>
+                                <p>
+                                    <a className='publisherUsername' href="#">publisherUsername</a>
+                                    <a className='publicationTime' href="#">horas</a></p>
+                                <p className='postAssets'></p>
+
+                            </section>
+
+                            <section className='moreOptionsSection'>
+                                <IonIcon className='moreOptions' icon={ellipsisHorizontalOutline}></IonIcon>
+
+                            </section>
+                        </section>
+
+                        <section className='markersProfilesSection'>
+                            <IonIcon className='markersProfiles' icon={personOutline}></IonIcon>
+
+                        </section>
+                        <section className='audioStatusSection'>
+                            <IonIcon className='audioStatus' icon={volumeHighOutline}></IonIcon>
+
+                        </section>
 
                     </section>
 
                 </section>
 
-                </section>
 
-
-                <IonIcon className=""></IonIcon>
-                <IonIcon className=""></IonIcon>
-                <IonIcon className=""></IonIcon>
 
 
             </section>

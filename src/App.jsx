@@ -70,6 +70,10 @@ function App() {
               perfil5="William"
             />
             <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+
           </section>
 
 

@@ -20,6 +20,9 @@
 }
 
 .primaryContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   width: 630px;
   height: 100%;

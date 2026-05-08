@@ -3,14 +3,17 @@ import { useState } from 'react';
 
 import { IonIcon } from '@ionic/react';
 
-import { ellipsisHorizontalOutline } from 'ionicons/icons';
-import { personOutline } from 'ionicons/icons';
-import { volumeHighOutline } from 'ionicons/icons';
-import { heartOutline } from 'ionicons/icons';
-import { chatbubbleOutline } from 'ionicons/icons';
-import { syncOutline } from 'ionicons/icons';
-import { paperPlaneOutline } from 'ionicons/icons';
-import { bookmarkOutline } from 'ionicons/icons';
+import { 
+    ellipsisHorizontalOutline, 
+    personOutline, 
+    volumeHighOutline, 
+    heartOutline, 
+    heart,
+    chatbubbleOutline, 
+    syncOutline, 
+    paperPlaneOutline, 
+    bookmarkOutline 
+} from 'ionicons/icons';
 
 import imagemPost from '../../imgs/imagemPost.jpeg';
 import imagePerfil from '../../imgs/imagePerfil.png';
@@ -19,18 +22,27 @@ export function Post(props) {
 
     const [comentario, setComentario] = useState("");
     const [aparecerComentario, setAparecerComentario] = useState(false);
+    
+    const [curtido, setCurtido] = useState(false);
+    const [numeroCurtidas, setNumeroCurtidas] = useState(100);
 
     const [listaComentarios, setListaComentarios] = useState([
         "Muito top 🔥",
         "Post incrível 👏"
     ]);
 
+    function alternarCurtida() {
+        if (curtido) {
+            setNumeroCurtidas(numeroCurtidas - 1);
+        } else {
+            setNumeroCurtidas(numeroCurtidas + 1);
+        }
+        setCurtido(!curtido);
+    }
+
     function adicionarComentario() {
-
         if (comentario.trim() === "") return;
-
         setListaComentarios([...listaComentarios, comentario]);
-
         setComentario("");
     }
 
@@ -51,7 +63,6 @@ export function Post(props) {
                                     <img className='perfilImageItem' src={imagePerfil} alt="" />
                                     <figcaption></figcaption>
                                 </figure>
-
                             </section>
 
                             <section className='postPublisherInformation'>
@@ -65,7 +76,6 @@ export function Post(props) {
                                         Original audio
                                     </a>
                                 </p>
-
                             </section>
 
                             <section className='moreOptionsSection'>
@@ -74,11 +84,9 @@ export function Post(props) {
                                     icon={ellipsisHorizontalOutline}
                                 />
                             </section>
-
                         </section>
 
                         <section className='bottomItems'>
-
                             <section className='markersProfilesSection'>
                                 <IonIcon
                                     className='markersProfiles'
@@ -92,28 +100,23 @@ export function Post(props) {
                                     icon={volumeHighOutline}
                                 />
                             </section>
-
                         </section>
-
                     </section>
-
                 </section>
-
             </section>
 
             <section className='postSecondPiece'>
-
                 <section className='interactionIcons'>
-
                     <section className='interactionIconsFirstPart'>
-
-                        <section className='heartIcon'>
+                        
+                        {/* Seção do Coração Atualizada */}
+                        <section className='heartIcon' onClick={alternarCurtida} style={{ cursor: 'pointer' }}>
                             <IonIcon
                                 className='heart'
-                                icon={heartOutline}
+                                icon={curtido ? heart : heartOutline}
+                                style={{ color: curtido ? '#ed4956' : 'inherit' }}
                             />
-
-                            <p className='value'>{100}</p>
+                            <p className='value'>{numeroCurtidas}</p>
                         </section>
 
                         <section
@@ -124,7 +127,6 @@ export function Post(props) {
                                 className='chatbubble'
                                 icon={chatbubbleOutline}
                             />
-
                             <p className='value'>
                                 {listaComentarios.length}
                             </p>
@@ -135,7 +137,6 @@ export function Post(props) {
                                 className='sync'
                                 icon={syncOutline}
                             />
-
                             <p className='value'>{50}</p>
                         </section>
 
@@ -145,7 +146,6 @@ export function Post(props) {
                                 icon={paperPlaneOutline}
                             />
                         </section>
-
                     </section>
 
                     <section className='interactionIconsSecondPart'>
@@ -156,14 +156,12 @@ export function Post(props) {
                             />
                         </section>
                     </section>
-
                 </section>
 
                 <section className='postInfo'>
-
                     <section className='likes'>
                         <p className='likesP'>
-                            like by <span>williamG</span> and <span>100</span>
+                            like by <span>williamG</span> and <span>{numeroCurtidas}</span>
                             <span> others</span>
                         </p>
                     </section>
@@ -174,68 +172,38 @@ export function Post(props) {
                             amet consectetur adipisicing elit.
                         </p>
                     </section>
-
                 </section>
-
             </section>
 
             {/* CAIXA DE COMENTÁRIOS */}
+            {aparecerComentario && (
+                <section className='comentariosModal'>
+                    <section className='comentariosBox'>
+                        <div className='comentariosTop'>
+                            <h2>Comentários</h2>
+                            <button onClick={() => setAparecerComentario(false)}>X</button>
+                        </div>
 
-            {
-                aparecerComentario && (
-
-                    <section className='comentariosModal'>
-
-                        <section className='comentariosBox'>
-
-                            <div className='comentariosTop'>
-
-                                <h2>Comentários</h2>
-
-                                <button
-                                    onClick={() => setAparecerComentario(false)}
-                                >
-                                    X
-                                </button>
-
-                            </div>
-
-                            <section className='listaComentarios'>
-
-                                {
-                                    listaComentarios.map((item, index) => (
-                                        <p key={index}>
-                                            <strong>usuario:</strong> {item}
-                                        </p>
-                                    ))
-                                }
-
-                            </section>
-
-                            <section className='adicionarComentario'>
-
-                                <input
-                                    type="text"
-                                    placeholder='Digite um comentário'
-                                    value={comentario}
-                                    onChange={(e) =>
-                                        setComentario(e.target.value)
-                                    }
-                                />
-
-                                <button onClick={adicionarComentario}>
-                                    Enviar
-                                </button>
-
-                            </section>
-
+                        <section className='listaComentarios'>
+                            {listaComentarios.map((item, index) => (
+                                <p key={index}>
+                                    <strong>usuario:</strong> {item}
+                                </p>
+                            ))}
                         </section>
 
+                        <section className='adicionarComentario'>
+                            <input
+                                type="text"
+                                placeholder='Digite um comentário'
+                                value={comentario}
+                                onChange={(e) => setComentario(e.target.value)}
+                            />
+                            <button onClick={adicionarComentario}>Enviar</button>
+                        </section>
                     </section>
-
-                )
-            }
-
+                </section>
+            )}
         </section>
     );
 }
